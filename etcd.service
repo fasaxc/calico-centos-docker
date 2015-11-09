@@ -1,0 +1,13 @@
+[Unit]
+Description=Etcd
+After=syslog.target network.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/start-etcd
+EnvironmentFile=-/etc/sysconfig/etcd
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

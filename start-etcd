@@ -1,0 +1,3 @@
+#!/bin/sh
+export ETCD_INITIAL_CLUSTER_TOKEN=`uuidgen`
+exec /usr/local/bin/etcd
